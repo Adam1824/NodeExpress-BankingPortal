@@ -19,6 +19,10 @@ app.get("/", (req, res) =>
     res.render("index", { title: "Account Summary", accounts: accounts })
 );
 
+app.get("/savings", (req, res) =>
+    res.render("account", { account: account.savings })
+);
+
 app.listen(3000, () =>
     console.log("PS Project Running on port 3000!")
 );
