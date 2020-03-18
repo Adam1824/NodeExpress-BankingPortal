@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
 
-const accountData = fs.readFileSync("src/json/accounts.json");
+const accountData = fs.readFileSync("src/json/accounts.json", "utf-8");
 const accounts = JSON.parse(accountData);
 
 app.get("/", (req, res) =>
