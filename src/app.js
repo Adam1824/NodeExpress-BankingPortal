@@ -20,7 +20,7 @@ app.get("/", (req, res) =>
 );
 
 app.get("/savings", (req, res) =>
-    res.render("account", { account: account.savings })
+    res.render("account", { account: accounts.savings })
 );
 
 app.listen(3000, () =>
