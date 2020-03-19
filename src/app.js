@@ -37,6 +37,7 @@ app.get("/profile", (req, res) => {
 });
 
 app.get("/transfer", (req, res) => {
+    // test
     res.render("transfer");
 })
 
