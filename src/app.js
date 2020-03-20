@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const express = require("express");
 
-const accounts, users, writeJSON = require("./data.js");
+const { accounts, users, writeJSON } = require("./data");
 
 const app = express();
 
