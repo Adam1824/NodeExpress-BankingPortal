@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const express = require("express");
 
+const accounts, users, writeJSON = require("./data.js");
 
 const app = express();
 
@@ -10,12 +11,6 @@ app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded(true));
-
-const accountData = fs.readFileSync("src/json/accounts.json", "utf-8");
-const accounts = JSON.parse(accountData);
-
-const userData = fs.readFileSync("src/json/users.json", "utf-8");
-const users = JSON.parse(userData);
 
 app.get("/", (req, res) => {
     res.render("index", { title: "Account Summary", accounts: accounts });
